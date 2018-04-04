@@ -50,7 +50,7 @@ def process_new_transactions():
             created_date = datetime.datetime.fromtimestamp(tr['created']).strftime('%Y-%m-%d')
             writer.writerow([tr['id'], tr['source'], "%.2f" % (tr['amount'] / 100.), tr['currency'], tr['type'], created_date, tr['description']])
             for fee in tr['fee_details']:
-                writer.writerow([tr['id'], tr['source'], "%.2f" % (fee['amount'] / 100.), fee['currency'], fee['type'], created_date, fee['description']])
+                writer.writerow([tr['id'], tr['source'], "%.2f" % (-1*fee['amount'] / 100.), fee['currency'], fee['type'], created_date, fee['description']])
 
     print("Created %s" % statement_filename)
 
