@@ -5,6 +5,7 @@ import calendar
 import csv
 import datetime
 import stripe
+stripe.api_version = '2017-12-14'
 
 last_txn_filename = 'last_txn_time.pkl'
 
@@ -29,7 +30,7 @@ def process_new_transactions():
     have_more_data = True
     balance_transactions = []
     while have_more_data:
-        page = stripe.BalanceTransaction.all(**filter_params)
+        page = stripe.BalanceTransaction.list(**filter_params)
         balance_transactions.extend(page['data'])
 
         have_more_data = page['has_more']
