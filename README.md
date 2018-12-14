@@ -17,13 +17,19 @@ Stripe's Python library
 How to Use It
 ------------
 
-Run the script. You'll need to set the ``STRIPE_API_KEY`` environment variable with your Stripe account's secret key. For example:
+Copy the example environment file:
+```
+cp .env.example .env
+```
 
-    set STRIPE_API_KEY=sk_live_abcd1234 
-	
-	python stripe_statements.py
+You'll need to set the `STRIPE_API_KEY` environment variable in `.env` with your Stripe account's secret key.
 
-The script will grab all of your balance transactions and create a CSV file suitable for importing into Xero. The next time it runs, it will only grab new transactions since the last run.
+Run the script:
+```
+make run
+```
+
+This task will grab all of your balance transactions and create a CSV file suitable for importing into Xero. The next time it runs, it will only grab new transactions since the last run.
 
 To get the data into Xero, you'll first need a bank account in Xero that represents your Stripe account.
 
