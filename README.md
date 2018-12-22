@@ -35,6 +35,13 @@ To get the data into Xero, you'll first need a bank account in Xero that represe
 
 Import the CSV file "statement" into your Stripe bank account in Xero, confirm that the fields match up the way you expect, and start reconciling.
 
+To import the CSV, run the following make command to open the Xero web page:
+```
+make upload
+```
+
+*Note:* This make task is currently only supported on OSX
+
 Enjoy!
 
 Other Notes
