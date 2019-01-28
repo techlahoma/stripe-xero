@@ -48,6 +48,7 @@ def process_new_transactions():
         writer = csv.writer(csvfile)
         writer.writerow(['id', 'source', 'amount', 'currency', 'type', 'date', 'description'])
         for tr in balance_transactions:
+            print(tr)
             created_date = datetime.datetime.fromtimestamp(tr['created']).strftime('%Y-%m-%d')
             writer.writerow([tr['id'], tr['source'], "%.2f" % (tr['amount'] / 100.), tr['currency'], tr['type'], created_date, tr['description']])
             for fee in tr['fee_details']:
