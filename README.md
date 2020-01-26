@@ -14,9 +14,14 @@ This tool saves the timestamp of the last balance transfer it found in Stripe, s
 
 ### Instructions
 
+
+First time only:
 ```
 git clone https://github.com/techlahoma/stripe-xero/
 virtualenv <name of virtual environment>
+```
+
+```
 source <path and name of virtual environment>/bin/activate/
 pip install stripe
 ```
