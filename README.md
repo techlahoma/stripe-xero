@@ -30,6 +30,11 @@ You'll need to set the `STRIPE_API_KEY` environment variable in `.env` with your
 
 
 #### Run the script:
+If someone else as run the script since the last time you did, you will want to pull from github again:
+```
+git pull
+```
+Run the script:
 ```
 make run
 ```
@@ -48,7 +53,7 @@ Import the newly created csv file to xero under the stripe account in Xero
 
 Commit changes (new pickle file) and push back up to github:
 ```
-git commit -a "pkl updates"
+git commit -a -m "pkl updates"
 ```
 
 
