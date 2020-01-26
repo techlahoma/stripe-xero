@@ -30,7 +30,7 @@ You'll need to set the `STRIPE_API_KEY` environment variable in `.env` with your
 
 
 #### Run the script:
-If someone else as run the script since the last time you did, you will want to pull from github again:
+If someone else has run the script since the last time you did, you will want to pull from github again:
 ```
 git pull
 ```
