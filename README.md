@@ -15,17 +15,11 @@ This tool saves the timestamp of the last balance transfer it found in Stripe, s
 ### Instructions
 
 
-First time only:
+#### First time only:
 ```
 git clone https://github.com/techlahoma/stripe-xero/
-virtualenv <name of virtual environment>
-```
-
-```
-source <path and name of virtual environment>/bin/activate/
 pip install stripe
 ```
-
 Copy the example environment file:
 
 ```
@@ -34,18 +28,15 @@ cp .env.example .env
 
 You'll need to set the `STRIPE_API_KEY` environment variable in `.env` with your Stripe account's secret key. If you don't have one of these, get an account from the Treasurer or Infrastructure Chair.
 
-Run the script:
+
+#### Run the script:
 ```
 make run
 ```
 
 This task will grab all of your balance transactions and create a CSV file suitable for importing into Xero. The next time it runs, it will only grab new transactions since the last run.
 
-To get the data into Xero, you'll first need a bank account in Xero that represents your Stripe account.
-
-Import the CSV file "statement" into your Stripe bank account in Xero, confirm that the fields match up the way you expect, and start reconciling.
-
-To import the CSV, 
+#### Import the CSV file "statement" into our Stripe bank account in Xero: 
 
 On OSX: run the following make command to open the Xero web page:
 ```
