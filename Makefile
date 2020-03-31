@@ -9,3 +9,10 @@ upload:
 
 clean:
 	rm ./*.csv
+
+commit:
+	git add last_txn_time.pkl
+	git commit -m "Update pkl file"
+	git push origin master
+
+all: clean run commit upload
